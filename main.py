@@ -14,6 +14,7 @@ def scan_website(domain):
     else:
         print(f"Failed to scan {domain}. Error: {response.status_code}")
 
+
 if __name__ == "__main__":
     domain = input("Enter a website domain to scan: ")
     scan_website(domain)
