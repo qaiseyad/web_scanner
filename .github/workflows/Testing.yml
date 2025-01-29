@@ -1,25 +1,25 @@
-name: This is testing pipline
-on: push
-
+name: This is testing pipeline
+on: 
+  push:
 
 jobs:
   test:
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: checkout repo
-      uses: actions/checkout@v3
-    
-    - name: set up python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.x"
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
       
-    - name: install dependencies 
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests
-      
-    - name: test the script
-      run: |
-        echo "abbny.com" | python main.py
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+        
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+        
+      - name: Test the script
+        run: |
+          echo "abbny.com" | python main.py
