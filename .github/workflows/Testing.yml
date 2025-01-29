@@ -3,7 +3,7 @@ on:
   push:
 
 jobs:
-  test:
+  Basics:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,3 +23,10 @@ jobs:
       - name: Test the script
         run: |
           echo "abbny.com" | python main.py
+
+  test2:
+    steps:
+      - name: only testing command
+      run: |
+      Hello in DevOps Wordl!
+      this only test statement
