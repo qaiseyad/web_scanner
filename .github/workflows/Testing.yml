@@ -24,9 +24,11 @@ jobs:
         run: |
           echo "abbny.com" | python main.py
 
-test2:
-  steps:
-    - name: only testing command
-      run: |
-        echo "Hello in DevOps World!"
-        echo "this only test statement"
+  test2:
+    runs-on: ubuntu-latest  # Added this line to specify the runner environment
+    
+    steps:
+      - name: only testing command
+        run: |
+          echo "Hello in DevOps World!"
+          echo "this only test statement"
