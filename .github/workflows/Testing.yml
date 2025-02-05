@@ -1,34 +1,16 @@
-name: This is testing pipeline
-on: 
+name: Hello DevOps
+
+on:
   push:
+    branches:
+      - master
 
 jobs:
-  Basics:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.x"
-        
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
-        
-      - name: Test the script
-        run: |
-          echo "abbny.com" | python main.py
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-  test2:
-    runs-on: ubuntu-latest  # Added this line to specify the runner environment
-    
-    steps:
-      - name: only testing command
-        run: |
-          echo "Hello in DevOps World!"
-          echo "this only test statement"
+      - name: Welcoming
+        run: echo "Hello DevOps"
