@@ -1,9 +1,9 @@
-name: Hello DevOps
+name: Hello DevOps Pipeline
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -14,3 +14,6 @@ jobs:
 
       - name: Welcoming
         run: echo "Hello DevOps"
+
+      - name: Second Job
+        run: echo "second job"
