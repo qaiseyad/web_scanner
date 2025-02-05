@@ -4,6 +4,7 @@ import requests
 API_KEY = "f752bfb31251fbde980864c4219f6f182bc93f882857ecfa30a45d0c56c4fb01"
 VT_URL = "https://www.virustotal.com/api/v3/domains/"
 
+
 def scan_website(domain):
     headers = {"x-apikey": API_KEY}
     response = requests.get(VT_URL + domain, headers=headers)
