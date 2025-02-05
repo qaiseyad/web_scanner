@@ -1,5 +1,6 @@
 import requests
 
+
 # Replace with your VirusTotal API key
 API_KEY = "f752bfb31251fbde980864c4219f6f182bc93f882857ecfa30a45d0c56c4fb01"
 VT_URL = "https://www.virustotal.com/api/v3/domains/"
